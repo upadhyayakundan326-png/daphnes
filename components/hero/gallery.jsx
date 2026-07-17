@@ -1,4 +1,5 @@
 import "./gallery.css"
+import Image from "next/image";
 export default function Gallery(){
     const gallery = [
   {
@@ -76,7 +77,7 @@ return(
      <div className="gallery-container">
      {gallery.map((ga,id)=>(
         <div className="gallery-cards"key={id}>
-              <img src={ga.image}></img>
+              <image src={ga.image}/>
               <p>{ga.title}</p>
 
             </div>

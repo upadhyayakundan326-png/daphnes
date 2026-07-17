@@ -8,7 +8,7 @@ function Hero(){
 return(
 <section className="hero1">
 
-  <img src="/daphnes.webp" alt="coffee" className="img" />
+  <image src="/daphnes.webp" alt="coffee" className="img" />
 
   <div className="hero-content">
      <h1 className="welcome"> Welocome to <strong className="strong">Daphnes</strong></h1>

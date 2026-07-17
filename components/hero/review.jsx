@@ -1,4 +1,5 @@
 import "./review.css";
+import Image from "next/image";
 
 export default function Review() {
 
@@ -86,7 +87,7 @@ const reviews = [
 Our guests enjoy the perfect blend of great taste, cozy ambience, and memorable moments.
 Every visit brings us closer to creating a better cafe experience.</h2>
 
-     <img src="daphnes2.0.avif" alt="daphnes" ></img>
+     <image src="daphnes2.0.avif" alt="daphnes" />
         </div>
      <div className="container">
       {reviews.map((user,id)=>(

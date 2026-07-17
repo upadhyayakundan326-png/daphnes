@@ -1,5 +1,6 @@
 
 import "./menu.css"
+import Image from "next/image"
 
 export default function Menu(){
     return(
@@ -22,7 +23,7 @@ export default function Menu(){
   >
     Get Directions
   </a>
-  <img src="/rose.jpg" alt="rose"></img>
+  <image src="/rose.jpg" alt="rose"/>
 </div>
         
         <div className="joined">
@@ -36,13 +37,13 @@ export default function Menu(){
 
     <div className="under">
         
-<img src="/burger.jpg"alt="menu"></img>
+<image src="/burger.jpg"alt="menu"/>
 
-<img src="/breakfast.jpg"alt="menu"></img>
+<image src="/breakfast.jpg"alt="menu"/>
 
-<img src="/dolci.jpg"alt="menu"></img>
+<image src="/dolci.jpg"alt="menu"/>
 
-<img src="/pasta.avif"alt="menu"></img>
+<image src="/pasta.avif"alt="menu"/>
 </div>
     </div>
 
