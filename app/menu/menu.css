@@ -55,15 +55,15 @@
 /* RIGHT SIDE */
 .joined{
     flex: 2;
-    margin-top:60px;
+    
 }
 
 .our-menu{
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .our-menu h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: crimson;
     margin-bottom: 20px;
 }

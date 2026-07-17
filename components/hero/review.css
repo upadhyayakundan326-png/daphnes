@@ -1,12 +1,12 @@
 .container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
 gap:20px;
 flex:2;
-margin-top:250px;
+margin-top:80px;
 }
 .card{
-    background-color: wheat;
+    background-color: rgb(218, 207, 187);
     height: 150px;
     padding: 20px;
     color:white;
@@ -34,10 +34,11 @@ margin-top:250px;
     flex:1;
     
     margin-top:110px;
-    margin-left: 160px;
+    margin-left: 60px;
 }
 .txt h1{
-    font-size: 4rem;
+    font-size: 3rem;
+    color: #555;
 
 }
 .txt h2{

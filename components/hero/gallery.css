@@ -1,6 +1,6 @@
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 80px;
   margin-top: 80px;
 }
@@ -18,8 +18,8 @@
 }
 
 .gallery-cards img {
-  width: 350;
-  height: 350px;
+  width: 150;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -40,6 +40,8 @@
 }
 .gallery-heading h1{
     font-size: 3rem;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 .gallery-heading p{

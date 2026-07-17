@@ -1,5 +1,5 @@
 .hero{
-    min-height:100vh;
+    min-height:55vh;
     background:#efe3d7;
     display:flex;
     justify-content:space-between;
@@ -42,7 +42,8 @@
 .hero-right h1{
     font-size:4.5rem;
     color:#4a2d21;
-    margin:20px 0;
+    margin:20px 0 ;
+    
 }
 
 .hero-right h1 span{

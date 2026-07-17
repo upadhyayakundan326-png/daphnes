@@ -25,13 +25,8 @@ export default function RestMenu() {
           View Direction
         </a>
 
-        <Image
-          src="/rose.jpg"
-          alt="Rose Heart"
-          width={400}
-          height={400}
-          className="visit-img"
-        />
+        
+        
       </div>
 
       {/* Right */}

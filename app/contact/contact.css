@@ -1,11 +1,13 @@
 .contact-us{
     max-width: 700px;
-    margin: 120px auto;
-    padding: 50px;
+    margin: 60px auto;
+    padding: 20px 20px;
     text-align: center;
     background:#efe3d7;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  
+
 }
 
 .contact-us h1{
