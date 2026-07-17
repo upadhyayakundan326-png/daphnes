@@ -1,5 +1,6 @@
 import "./features.css";
 import Image from "next/image";
+import Link from "next/link";
 export default function(){
     return(
 <section className="about">
@@ -20,9 +21,9 @@ export default function(){
       with friends.
     </p>
 
-    <button className="about-btn">
+    <Link href="/order"><button className="about-btn">
       Order Online
-    </button>
+    </button></Link>
 
   </div>
 

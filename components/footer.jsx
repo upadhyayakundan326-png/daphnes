@@ -17,7 +17,7 @@ return(
   <div className="footer-btns">
     
 
-    <Link href="#contact">
+    <Link href="/contact">
       <button>Contact Us 📞</button>
     </Link>
   </div>

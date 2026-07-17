@@ -1,0 +1,48 @@
+import "./contact.css";
+
+export default function Contact() {
+  return (
+    <section className="contact-us">
+
+      <h1>Contact Us</h1>
+
+      <p>
+        Whether you have a question, want to reserve a table,
+        place an order, or plan a special event, we're always
+        here to help.
+      </p>
+
+      <p>
+        <strong>
+          Thank you for choosing Daphne's Family Café.
+          We look forward to welcoming you soon!
+        </strong>
+      </p>
+
+      <div className="contact-info">
+
+        <p>📍 Machkhowa, Guwahati, Assam 781009</p>
+
+        <a href="tel:+919101648595">
+          📞 +91 91016 48595
+        </a>
+
+        <a href="mailto:upadhyayakundan326@gmail.com">
+          ✉️ upadhyayakundan326@gmail.com
+        </a>
+
+        <a
+          href="https://instagram.com/daphnesfamilycafe"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📸 @daphnesfamilycafe
+        </a>
+
+        <p>🕒 Mon – Sun | 9:00 AM – 10:00 PM</p>
+
+      </div>
+
+    </section>
+  );
+}

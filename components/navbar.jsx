@@ -16,7 +16,7 @@ export default function Navbar() {
   
   <li className="link"><a href="#gallery">Gallery</a></li>
   <li className="link"><a href="#reviews">Reviews</a></li>
-  <li className="link"><Link href="/book">Booking</Link></li>
+  <li className="link"><Link href="/contact">Contact</Link></li>
 </ul>
      
        
