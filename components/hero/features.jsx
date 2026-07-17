@@ -28,7 +28,7 @@ export default function(){
   </div>
 
   <div className="about-image">
-    <image src="/coffe.jpg" alt="Coffee" />
+    <img src="/coffe.jpg" alt="Coffee" />
   </div>
 
 </section>

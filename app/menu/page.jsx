@@ -1,56 +1,59 @@
+import Image from "next/image";
+import "./menu.css";
 
-import "./menu.css"
-import Image from "next/image"
+export default function RestMenu() {
+  return (
+    <section className="rest-menu">
 
-export default function Menu(){
-    return(
-        <section className="rest-menu">
-            <div className="visit">
-  <h2>Visit Us</h2>
+      {/* Left */}
+      <div className="visit">
+        <h2>Visit Us</h2>
 
-  <p>
-    We'd love to welcome you! Visit our café in the heart of
-    Machkhowa, Guwahati, and enjoy freshly brewed coffee,
-    delicious meals, and a warm atmosphere.
-  </p>
+        <p>
+          We'd love to welcome you! Visit us and enjoy the perfect
+          combination of delicious food, cozy ambience and friendly
+          service.
+        </p>
 
-  <h4>📍 Machkhowa, Guwahati, Assam 781009</h4>
+        <h4>📍 Machkhowa, Guwahati, Assam - 781009</h4>
 
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=Machkhowa+Guwahati+Assam"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Get Directions
-  </a>
-  <image src="/rose.jpg" alt="rose"/>
-</div>
-        
-        <div className="joined">
-       <div className="our-menu">
+        <a
+          href="https://maps.google.com/?q=Daphne's+Cafe+Machkhowa+Guwahati"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Direction
+        </a>
 
-        <h1>Fresh Flavors💕</h1>
-            <br/>
-            <h2>From hearty breakfasts to authentic pasta, juicy burgers <br/> and sweet desserts, there's something to satisfy every craving.</h2>
+        <Image
+          src="/rose.jpg"
+          alt="Rose Heart"
+          width={400}
+          height={400}
+          className="visit-img"
+        />
+      </div>
 
-</div>
+      {/* Right */}
+      <div className="joined">
+        <div className="our-menu">
+          <h1>Fresh Flavors 💕</h1>
 
-    <div className="under">
-        
-<image src="/burger.jpg"alt="menu"/>
+          <h2>
+            From hearty breakfasts to artisanal pasta, juicy burgers,
+            refreshing beverages and delightful desserts, there's
+            something to satisfy every craving.
+          </h2>
+        </div>
 
-<image src="/breakfast.jpg"alt="menu"/>
+        <div className="under">
+          <Image src="/dolci.jpg" alt="Menu 1" width={350} height={500} />
+          <Image src="/burger.jpg" alt="Menu 2" width={350} height={500} />
+          <Image src="/breakfast.jpg" alt="Menu 3" width={350} height={500} />
+          <Image src="/pasta.avif" alt="Menu 4" width={350} height={500} />
+        </div>
+      </div>
 
-<image src="/dolci.jpg"alt="menu"/>
-
-<image src="/pasta.avif"alt="menu"/>
-</div>
-    </div>
-
-
-
-
-
-        </section>
-    )
+    </section>
+  );
 }

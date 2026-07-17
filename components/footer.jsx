@@ -1,29 +1,41 @@
 import "./footer.css";
 import Link from "next/link";
 
-export default function Footer(){
+export default function Footer() {
+  return (
+    <footer className="footer">
 
-return(
+      <div className="footer-line"></div>
 
-<footer className="footer">
-  <h2>Thank You for Visiting Daphnes 💕</h2>
+      <h2>☕ Thank You for Being Part of Daphnes</h2>
 
-  <p>
-    We truly appreciate you taking the time to visit our cafe.
-    We hope to welcome you soon and serve you the finest coffee,
-    delicious food, and unforgettable moments.
-  </p>
+      <p className="footer-text">
+        Every cup of coffee tells a story, and we're grateful you've chosen
+        Daphnes to be a part of yours. Whether you're here for a peaceful
+        morning coffee, a delightful meal, or moments with loved ones, our
+        doors are always open to welcome you with warmth, comfort, and genuine
+        hospitality.
+      </p>
 
-  <div className="footer-btns">
-    
+      <p className="quote">
+        "Life begins after coffee... and every beautiful memory begins at
+        Daphnes."
+      </p>
 
-    <Link href="/contact">
-      <button>Contact Us 📞</button>
-    </Link>
-  </div>
+      <div className="footer-btns">
+        <Link href="/contact">
+          <button>Contact Us 📞</button>
+        </Link>
+      </div>
 
-  <p className="copyright">
-    © 2026 Daphnes Cafe • Brewed with Love ❤️
-  </p>
-</footer>
-)}
+      <div className="footer-bottom">
+        <p>Made with ❤️ for coffee lovers.</p>
+
+        <p className="copyright">
+          © 2026 Daphnes Cafe • All Rights Reserved.
+        </p>
+      </div>
+
+    </footer>
+  );
+}

@@ -1,21 +1,21 @@
-.rest-menu{
+.rest-menu {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
-    gap: 80px;
+    gap: 190px; /* dono ke beech ka gap */
     padding: 100px 8%;
-    background: #fff;
 }
+
 
 /* LEFT SIDE */
 .visit{
     flex: 1;
-    background: #fff;
+    background:#efe3d7;
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,.12);}
     .visit{
-    transform: translateY(-80px);
+    transform: translateY(0px);
 }
 
 
@@ -28,7 +28,7 @@
 .visit p{
     font-size: 1.1rem;
     color: #555;
-    line-height: 1.8;
+    line-height: 1.4;
     margin-bottom: 25px;
 }
 
@@ -55,6 +55,7 @@
 /* RIGHT SIDE */
 .joined{
     flex: 2;
+    margin-top:60px;
 }
 
 .our-menu{
@@ -90,7 +91,7 @@
 }
 
 .under img:hover{
-    transform: scale(1.5);
+    transform: scale(1.09);
 }
 
 /* RESPONSIVE */

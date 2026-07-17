@@ -77,7 +77,7 @@ return(
      <div className="gallery-container">
      {gallery.map((ga,id)=>(
         <div className="gallery-cards"key={id}>
-              <image src={ga.image}/>
+              <img src={ga.image}/>
               <p>{ga.title}</p>
 
             </div>

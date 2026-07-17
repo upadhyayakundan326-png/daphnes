@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3,1fr);
 gap:20px;
 flex:2;
-margin-top:170px;
+margin-top:250px;
 }
 .card{
     background-color: wheat;
@@ -33,8 +33,8 @@ margin-top:170px;
 .txt{
     flex:1;
     
-    margin-top:0px;
-    margin-left: 60px;
+    margin-top:110px;
+    margin-left: 160px;
 }
 .txt h1{
     font-size: 4rem;

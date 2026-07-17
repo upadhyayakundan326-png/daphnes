@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .gallery-cards {
@@ -36,10 +36,10 @@
     align-items: center;
 }
 .gallery-heading{
-    margin-top:50px;
+    margin-top:150px;
 }
 .gallery-heading h1{
-    font-size: 4rem;
+    font-size: 3rem;
 
 }
 .gallery-heading p{
