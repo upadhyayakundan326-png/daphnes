@@ -53,6 +53,12 @@ margin-top:250px;
    width: 300px;
   height: 300px;
   object-fit: cover;
+  border-radius: 20px;
+  transition:transform 0.6s ease;
+  margin-top:30px;
+}
+.txt img:hover{
+    transform: scale(1.08);
 }
 
 
