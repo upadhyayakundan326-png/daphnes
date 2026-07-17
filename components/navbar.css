@@ -1,0 +1,40 @@
+
+.link:hover{
+    text-decoration: underline;
+    text-decoration-color: crimson;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+
+}
+.navlinks a {
+  color: white ;
+  text-decoration: none;
+}
+
+
+
+.navlinks{
+    display: flex;
+    list-style: none;
+    gap:25px;
+    justify-content: center;
+align-items: center;
+
+
+
+}
+.nav{
+  position: fixed;
+  top: 20px;
+  left:50%;
+  transform: translatex(-50%);
+  
+
+  
+  
+ 
+  z-index: 999;
+}
+
+  
+  
