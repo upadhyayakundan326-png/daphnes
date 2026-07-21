@@ -1,7 +1,9 @@
+"use client";
 import "./gallery.css"
 import Image from "next/image";
+import { motion } from "framer-motion";
 export default function Gallery(){
-    
+
 
 const dishes = [
   {
@@ -54,7 +56,14 @@ const dishes = [
 
       <div className="dishes-grid">
         {dishes.map((dish) => (
-          <div key={dish.id} className="dish-card">
+          <motion.div key={dish.id}
+          
+          className="dish-card"
+          initial={{opacity:0,y:40}}
+          whileInView={{opacity:1,y:0}}
+          transition={{duration:0.8}}
+          viewport={{once:false,amount:0.3}}
+          >
             <div className="image-wrapper">
               <img
                 src={dish.image}
@@ -71,7 +80,7 @@ const dishes = [
               <p className="dish-description">{dish.description}</p>
            
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

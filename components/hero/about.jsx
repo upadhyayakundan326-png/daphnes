@@ -1,9 +1,17 @@
+"use client";
 import "./about.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="brew-story" id="about">
+    <motion.section 
+    className="brew-story" id="about"
+     initial={{opacity:0,y:40}}
+     whileInView={{opacity:1,y:0}}
+     transition={{duration:0.8}}
+     viewport={{once:false ,amount:0.3}}
+    >
       <div className="brew-wrapper">
 
         <div className="brew-img">
@@ -71,6 +79,6 @@ export default function About() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

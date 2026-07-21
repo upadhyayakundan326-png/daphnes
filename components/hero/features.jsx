@@ -1,9 +1,20 @@
+"use client";
 import "./features.css";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 export default function(){
     return(
-<section className="about">
+<motion.section
+
+className="about"
+
+   initial={{opacity:0,y:40}}
+whileInView={{opacity:1,y:0}}
+transition={{duration:0.8}}
+viewport={{once:false,amount:0.3}}
+
+    >
 
   <div className="about-content">
 
@@ -41,5 +52,5 @@ export default function(){
   />
 </div>
 
-</section>
+</motion.section>
 )}

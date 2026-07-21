@@ -1,5 +1,6 @@
+"use client";
 import "./review.css";
-
+import { motion } from "framer-motion";
 const reviews = [
   {
     id: 1,
@@ -26,7 +27,14 @@ const reviews = [
 
 export default function Review() {
   return (
-    <section className="review-section">
+    <motion.section
+     className="review-section"
+     initial={{opacity:0,y:40}}
+whileInView={{opacity:1,y:0}}
+transition={{duration:0.8}}
+viewport={{once:false,amount:0.3}}
+
+     >
 
       <span className="review-tag">
         GUEST TESTIMONIALS
@@ -77,6 +85,6 @@ export default function Review() {
 
       </div>
 
-    </section>
+    </motion.section>
   );
 }

@@ -64,8 +64,8 @@
 }
 
 .delivery-btn:hover{
-    background:#5d361d;
-    transform:translateY(-3px);
+    background:crimson;
+    transform:translateY(-5px);
 }
 
 /* ================= Tablet ================= */

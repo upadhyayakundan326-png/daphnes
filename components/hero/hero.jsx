@@ -1,10 +1,19 @@
+"use client";
 import "./hero.css"
 import Link from "next/link"
 import Image from "next/image"
+import { motion } from "framer-motion";
+
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <motion.section className="hero"
+    initial={{opacity:0,y:-40}}
+whileInView={{opacity:1,y:0}}
+transition={{duration:0.8}}
+viewport={{once:false,amount:0.3}}
+    
+    >
       {/* Background Image using Next.js Image component */}
       <Image
         src="/ex2.jpg"
@@ -39,13 +48,16 @@ export default function Hero() {
               EXPLORE MENU &rarr;
             </button>
           </Link>
-          <a href="tel:+1234567890">
+          <a href="tel:+919101648595">
             <button className="btn-secondary">
               📞 CALL US
             </button>
           </a>
+          <Link href="/booking">
+             <button className="booking-btn">Booking Via Whatsapp</button>
+          </Link>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

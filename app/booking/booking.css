@@ -1,0 +1,70 @@
+/* booking.css */
+
+main {
+    max-width: 700px;
+    margin: 100px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+    font-size: 2rem;
+}
+
+main input,
+main textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+main input:focus,
+main textarea:focus {
+    border-color: crimson;
+    box-shadow: 0 0 8px rgba(220,20,60,.25);
+}
+
+main textarea {
+    resize: none;
+    height: 120px;
+}
+
+main button {
+    width: 100%;
+    padding: 15px;
+    background: crimson;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+main button:hover {
+    background: #b3002d;
+    transform: translateY(-2px);
+}
+
+@media (max-width:768px) {
+    main {
+        margin: 40px 15px;
+        padding: 25px;
+    }
+
+    main h1 {
+        font-size: 1.7rem;
+    }
+}

@@ -1,8 +1,19 @@
+"use client";
 import "./contact.css";
+import { motion } from "framer-motion";
+
 
 export default function Contact() {
   return (
-    <section className="contact-us">
+    <motion.section 
+    className="contact-us"
+initial={{opacity:0,y:40}}
+whileInView={{opacity:1,y:0}}
+transition={{duration:0.8}}
+viewport={{once:false,amount:0.3}}
+
+
+    >
 
       <h1>Contact Us</h1>
 
@@ -52,6 +63,6 @@ export default function Contact() {
 
       </div>
 
-    </section>
+    </motion.section>
   );
 }

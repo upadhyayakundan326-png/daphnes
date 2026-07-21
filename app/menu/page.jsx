@@ -1,8 +1,13 @@
+
+"use client";
 import "./menu.css";
 import menuData from "./menudata";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function Menu() {
+
+
+export default function Menu(){
 
   const featuredItems = [
     menuData[0].items[0],
@@ -11,8 +16,13 @@ export default function Menu() {
   ];
 
   return (
-    <section className="menu-page">
-
+    <motion.section
+  className="menu-page"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8}}
+  viewport={{ once: false }}
+>
       {/* Header */}
 
       <div className="menu-header">
@@ -78,13 +88,23 @@ export default function Menu() {
 
       {/* Full Menu */}
 
-      <div className="menu-container">
+      <motion.div
+       className="menu-container"
+       
+       
+       >
 
         {menuData.map((category) => (
 
-          <div
+          <motion.div
             className="menu-category"
+             initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+ viewport={{ once: false, amount: 0.3 }}
             key={category.category}
+
+            
           >
 
             <h2 className="category-title">
@@ -96,6 +116,7 @@ export default function Menu() {
               <div
                 className="menu-item"
                 key={item.name}
+                
               >
 
                 <Image
@@ -126,12 +147,12 @@ export default function Menu() {
 
             ))}
 
-          </div>
+          </motion.div>
 
         ))}
 
-      </div>
+      </motion.div>
 
-    </section>
+    </motion.section>
   );
 }

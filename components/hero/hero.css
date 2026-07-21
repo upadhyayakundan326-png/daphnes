@@ -73,7 +73,8 @@
 }
 
 .btn-primary,
-.btn-secondary{
+.btn-secondary,
+.booking-btn{
     padding:14px 30px;
     border-radius:30px;
     font-size:15px;
@@ -182,4 +183,15 @@
     font-size:14px;
 }
 
+}.booking-btn{
+   
+    border:1px solid rgba(255,255,255,.6);
+    background:rgba(0,0,0,.3);
+    color:#fff;
+    backdrop-filter:blur(5px);
+}
+
+.booking-btn:hover{
+    background: #1da851;
+    transform: translateY(-3px);
 }
