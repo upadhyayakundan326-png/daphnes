@@ -15,7 +15,15 @@ export default function Navbar() {
 
   <li className="link"><a href="/menu">Menu</a></li>
   <li className="link"><Link href="/contact">Contact</Link></li>
-  <li className="link"><a href="/order">Delievery</a></li>
+  <li className="link">
+  <a
+    href="https://www.zomato.com/your-zomato-link"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Delivery
+  </a>
+</li>
 
 </ul>
      

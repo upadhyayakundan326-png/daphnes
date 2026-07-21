@@ -39,3 +39,20 @@
 .contact-info a:hover{
     color: crimson;
 }
+.direction-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 14px;
+    background: crimson;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.direction-btn:hover{
+    background: #b3002d;
+    transform: translateY(-2px);
+}

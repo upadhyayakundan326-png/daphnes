@@ -21,10 +21,14 @@ export default function(){
       with friends.
     </p>
 
-    <Link href="/order"><button className="about-btn">
-      Order Online
-    </button></Link>
-
+   <a
+  href="https://www.zomato.com/your-link"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="delivery-btn"
+>
+  Order Online
+</a>
   </div>
 
   <div className="about-image">

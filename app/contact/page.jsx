@@ -14,7 +14,7 @@ export default function Contact() {
 
       <p>
         <strong>
-          Thank you for choosing Daphne's Family Café.
+          Thank you for choosing Daphnes Family Cafe.
           We look forward to welcoming you soon!
         </strong>
       </p>
@@ -40,6 +40,15 @@ export default function Contact() {
         </a>
 
         <p>🕒 Mon – Sun | 9:00 AM – 10:00 PM</p>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Daphnes+Family+Cafe+Machkhowa+Guwahati+Assam"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="direction-btn"
+        >
+          📍 Get Directions
+        </a>
 
       </div>
 
