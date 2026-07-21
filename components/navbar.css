@@ -1,55 +1,51 @@
-
-.link:hover{
-    text-decoration: underline;
-    text-decoration-color: crimson;
-    text-decoration-thickness: 5px;
-    text-underline-offset: 5px;
-
-}
-.navlinks a {
-  color:crimson ;
-  text-decoration: none;
-  font-size: 1.09rem;
-  font-weight: 900;
-
-}
-
-
-
-
-
-.navlinks{
-    display: flex;
-    list-style: none;
-    gap:25px;
-    justify-content: flex-start;
-align-items: center;
-
-
-
-
-}
-.nav{
-  position: fixed;
-  top:0px;
-  left:50%;
-  transform: translatex(-50%);
-  background: transparent;
-  width: 100%;
-  z-index: 100;
-  padding: 0px 10px;
-  box-shadow: 0 10 150 #555;
-  
-
-}
-  
-
-  .nav.scrolled{
-    background: rgba(0,0,0,.8);
-  }
-  
+/* Container styling - Header ko image ke upar float karne ke liye */
+.nav {
  
-  
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Nav items ko center karne ke liye */
+  align-items: center;
+  padding: 20px 0;
+  z-index: 1000;
+  background: transparent;
+  position: fixed;
+}
 
+/* Glassmorphism Pill (ul.navlinks) */
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 12px 35px;
+  margin: 0;
+  border-radius: 50px;
   
+  /* Frosted Glass Effect */
+  background: rgba(255, 255, 255, 0.08); /* Transparent Overlay */
+  backdrop-filter: blur(12px);          /* Background Blur */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle White Border */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   
+}
+
+/* Individual Links */
+.link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Hover & Active States */
+.link a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}

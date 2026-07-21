@@ -21,7 +21,7 @@ export default function Navbar() {
     target="_blank"
     rel="noopener noreferrer"
   >
-    Delivery
+    Order
   </a>
 </li>
 

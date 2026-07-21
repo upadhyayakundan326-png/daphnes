@@ -1,34 +1,51 @@
- import "./hero.css"
- import Link from "next/link"
- export default function Hero(){
-return(
-<section className="hero">
+import "./hero.css"
+import Link from "next/link"
+import Image from "next/image"
 
-  <div className="hero-left">
-    <div className="image-box">
-      <img src="/new.jpg" alt="coffee" />
-    </div>
-   
-  </div>
+export default function Hero() {
+  return (
+    <section className="hero">
+      {/* Background Image using Next.js Image component */}
+      <Image
+        src="/ex2.jpg"
+        alt="Cafe Background"
+        fill
+        priority
+        quality={90}
+        style={{ objectFit: 'cover' }}
+        className="hero-bg-image"
+      />
 
-  <div className="hero-right">
-    <span className="tag">COFFEE SHOP</span>
+      {/* Dark Overlay for better text readability */}
+      <div className="hero-overlay"></div>
 
-    <h1>
-      Welcome to <span>Daphnes</span>
-    </h1>
+      {/* Hero Content (Centered like Leaf Deck) */}
+      <div className="hero-content">
+        <span className="tag">WELCOME TO</span>
 
-    <p>
-      Freshly brewed coffee, handcrafted drinks, delicious food
-      and unforgettable moments in a warm and cozy atmosphere.
-    </p>
+        <h1>
+          Daphnes <span>Cafe</span>
+        </h1>
 
-    <Link href="/menu">
-      <button>Explore Menu</button>
-    </Link>
+        <p className="sub-tag">CAFE · BAR · DINE-IN</p>
 
-  </div>
+        <p className="description">
+          Crafted flavours. Memorable moments.
+        </p>
 
-</section>
-)
- }
+        <div className="button-group">
+          <Link href="/menu">
+            <button className="btn-primary">
+              EXPLORE MENU &rarr;
+            </button>
+          </Link>
+          <a href="tel:+1234567890">
+            <button className="btn-secondary">
+              📞 CALL US
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}

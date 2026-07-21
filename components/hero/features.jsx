@@ -22,7 +22,7 @@ export default function(){
     </p>
 
    <a
-  href="https://www.zomato.com/your-link"
+  href="https://www.zomato.com/guwahati/daphnes-bharalumukh"
   target="_blank"
   rel="noopener noreferrer"
   className="delivery-btn"
@@ -31,9 +31,15 @@ export default function(){
 </a>
   </div>
 
-  <div className="about-image">
-    <img src="/coffe.jpg" alt="Coffee" />
-  </div>
+ <div className="about-image">
+  <Image
+    src="/coffe.jpg"
+    alt="Coffee"
+    width={400}
+    height={500}
+    className="coffee-image"
+  />
+</div>
 
 </section>
 )}

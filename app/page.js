@@ -13,9 +13,10 @@ export default function Home() {
       
       <Features />
       <About/>
-         <Review />
+       
 
          <Gallery/>
+          <Review/>
      
       
       

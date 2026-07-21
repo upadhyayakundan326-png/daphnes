@@ -88,19 +88,19 @@ const menuData = [
     items: [
       {
         name: "Classic Veg Burger",
-        image: "/veg-burger.jpg",
+        image: "/veg.jpg",
         description: "Grilled veg patty with fresh lettuce.",
         price: "₹199",
       },
       {
         name: "Chicken Burger",
-        image: "/chicken-burger.jpg",
+        image: "/chicken.jpg",
         description: "Juicy chicken patty with cheese.",
         price: "₹249",
       },
       {
         name: "Double Cheese Burger",
-        image: "/double-cheese.jpg",
+        image: "/dchees.jpg",
         description: "Loaded with double cheese and sauces.",
         price: "₹299",
       },
@@ -112,7 +112,7 @@ const menuData = [
     items: [
       {
         name: "Espresso",
-        image: "/espresso.jpg",
+        image: "/espreso.jpg",
         description: "Strong and rich Italian espresso.",
         price: "₹149",
       },
@@ -124,7 +124,7 @@ const menuData = [
       },
       {
         name: "Cafe Latte",
-        image: "/latte.jpg",
+        image: "/late.jpg",
         description: "Smooth espresso with creamy milk.",
         price: "₹199",
       },
@@ -166,19 +166,19 @@ const menuData = [
     items: [
       {
         name: "Fresh Lime Soda",
-        image: "/lime-soda.jpg",
+        image: "/soda.jpg",
         description: "Refreshing sweet and salted lime soda.",
         price: "₹129",
       },
       {
         name: "Cold Coffee",
-        image: "/cold-coffee.jpg",
+        image: "/coldcofee.jpg",
         description: "Chilled coffee blended with ice cream.",
         price: "₹199",
       },
       {
         name: "Fresh Orange Juice",
-        image: "/orange-juice.jpg",
+        image: "/orange.jpg",
         description: "100% freshly squeezed orange juice.",
         price: "₹179",
       },

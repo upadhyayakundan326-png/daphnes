@@ -1,107 +1,82 @@
 import "./review.css";
-import Image from "next/image";
-
-export default function Review() {
 
 const reviews = [
   {
     id: 1,
-    name: "Rahul Sharma",
+    name: "ANANYA ROY",
     rating: 5,
-    comment: "Quality bahut achhi hai, product bilkul image jaisa mila."
+    review:
+         "daphnes cafe is one of the best cafe in ghy,bcoz of it gives us a very premium vibe and tasty food item."
   },
   {
     id: 2,
-    name: "Amit Das",
-    rating: 4,
-    comment: "Delivery fast thi aur packaging bhi kaafi achhi thi."
+    name: "PRITAM DAS",
+    rating: 5,
+    review:
+      "Impressed by the quality of their items and  Coffee. Clean patio seating, attentive staff, and convenient location."
   },
   {
     id: 3,
-    name: "Priya Singh",
+    name: "BISHAL SHARMA",
     rating: 5,
-    comment: "Amazing product! Quality aur fitting dono perfect hai."
-  },
-  {
-    id: 4,
-    name: "Rohan Verma",
-    rating: 4,
-    comment: "Price ke hisaab se product value for money hai."
-  },
-  {
-    id: 5,
-    name: "Neha Gupta",
-    rating: 5,
-    comment: "Customer service bahut helpful thi. Highly recommended."
-  },
-  {
-    id: 6,
-    name: "Arjun Patel",
-    rating: 3,
-    comment: "Product thik tha, lekin delivery thodi late hui."
-  },
-  {
-    id: 7,
-    name: "Karan Mehta",
-    rating: 5,
-    comment: "Bahut comfortable aur premium quality ka product hai."
-  },
-  {
-    id: 8,
-    name: "Sneha Roy",
-    rating: 4,
-    comment: "Design bahut pasand aaya, overall experience acha raha."
-  },
-  {
-    id: 9,
-    name: "Vikas Kumar",
-    rating: 5,
-    comment: "Second time order kiya aur experience phir se great raha."
-  },
-  {
-    id: 10,
-    name: "Anjali Sharma",
-    rating: 4,
-    comment: "Product acha hai, quality expected se better mili."
+    review:
+      "A refined atmosphere ideal for business discussions and evening dining. Their Double Cheese Burger and Cappuccino are highly recommended."
   }
 ];
 
-
-
-
-
+export default function Review() {
   return (
-    <section className="review" id="reviews"
->
-  <div className="txt">
+    <section className="review-section">
 
-    <h1>BREWING, </h1>
-    <br/>
-        <h1>HAPPINESS💕</h1>
-    
-        
-       
-        
-      <h2>Loved by Coffee Lovers
+      <span className="review-tag">
+        GUEST TESTIMONIALS
+      </span>
 
-Our guests enjoy the perfect blend of great taste, cozy ambience, and memorable moments.
-Every visit brings us closer to creating a better cafe experience.</h2>
-      
-     <img
-      src="daphnes2.0.avif"
-       alt="daphnes"
-       
-       />
-        </div>
-     <div className="container">
-      {reviews.map((user,id)=>(
-        <div className="card" key={id}>
-            <h3>{user.name}</h3>
-            <div><p>{user.rating}⭐</p></div>
-             <div><p>{user.comment}</p></div>
+      <h1>
+        Guest Feedback <span>& Ratings</span>
+      </h1>
+
+      <div className="rating-box">
+        ⭐⭐⭐⭐⭐
+        <strong>4.6 / 5.0 Rating</strong>
+        <span>| 300+ Customer Reviews</span>
+      </div>
+
+      <div className="review-container">
+
+        {reviews.map((item) => (
+
+          <div className="review-card" key={item.id}>
+
+            <div className="quote">❝</div>
+
+            <div className="stars">
+              ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>{item.review}</p>
+
+            <hr />
+
+            <div className="bottom">
+
+              <div>
+                <h3>{item.name}</h3>
+                <small>Verified Visitor</small>
+              </div>
+
+              <span className="verified">
+                ✔ VERIFIED
+              </span>
+
+            </div>
 
           </div>
-))}
+
+        ))}
+
       </div>
-      </section>
-  )}
+
+    </section>
+  );
+}

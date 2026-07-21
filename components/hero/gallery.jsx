@@ -1,94 +1,81 @@
 import "./gallery.css"
 import Image from "next/image";
 export default function Gallery(){
-    const gallery = [
+    
+
+const dishes = [
   {
     id: 1,
-    image: "/pastre.jpg",
-    title: "Our Signature Pastree",
+    title: "Truffle Mushroom Pasta",
+    price: "₹450",
+    description: "Creamy fettuccine infused with wild mushrooms, black truffle oil, and freshly grated parmesan.",
+    image: "trufle.jpg",
   },
   {
     id: 2,
-    image: "/special.jpg",
-    title: "Menu Special",
+    title: "Avocado & Salmon Toast",
+    price: "₹520",
+    description: "Artisanal sourdough toasted, layered with smashed avocado, smoked salmon, and poached egg.",
+    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 3,
-    image: "/outer1.jpg",
-    title: "Cozy Interior",
+    title: "Wood-Fired Margherita",
+    price: "₹380",
+    description: "Classic Neapolitan pizza with fresh mozzarella, San Marzano tomato sauce, and fragrant basil.",
+    image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=800&auto=format&fit=crop"
   },
-  {
-    id: 4,
-    image: "/fav.jpg",
-    title: "Most ordered",
-  },
-  {
-    id: 5,
-    image: "/upgrade.jpg",
-    title: "Indoor Seating"
-  },
-  {
-    id: 6,
-    image: "/famouse.jpg",
-    title: "Beverage Specials",
-  },
-    {
-    id: 7,
-    image: "/daphnes2.0.avif",
-    title: "Rooftop Cafe",
-  },
-    {
-    id: 8,
-    image: "/coffe.jpg",
-    title: "coffee Specials",
-  },
-  {
-    id: 9,
-    image: "/more.jpg",
-    title: "Main course",
-  },
-  {
-    id: 10,
-    image: "/1more.jpg",
-    title: "Delicious",
-  },
-  {
-    id: 11,
-    image: "/2more.jpg",
-    title: "Cheat Meal",
-  },
-  {
-    id: 12,
-    image: "/3more.jpg",
-    title: "Last on the gallery",
-  },
-
-     
+  {       id:4,
+        title: "Paneer Tikka",
+        image: "/tika.jpg",
+        description: "Marinated cottage cheese grilled with Indian spices.",
+        price: "₹249",
+      },
+      {  id:5,
+        name: "Crispy Chicken",
+        image: "/chic.jpg",
+        description: "Golden fried chicken served with spicy dip.",
+        price: "₹299",
+      },
+      {  id:6,
+        name: "Veg Spring Roll",
+        image: "/roll.jpg",
+        description: "Crispy rolls stuffed with fresh vegetables.",
+        price: "₹199",
+      },
+      
 ];
-return(
-    <section className="gallery">
 
-<div className="gallery-heading">
-    <h1>MOMENTS WORTH <br/>SHARING✨</h1>
-    <br/>
-        <p>Discover the taste, comfort, and memories captured in every frame.💖</p>
-</div>
-     
-     <div className="gallery-container">
-     {gallery.map((ga,id)=>(
-        <div className="gallery-cards"key={id}>
-              <img src={ga.image}/>
-              <p>{ga.title}</p>
 
+  return (
+    <section className="signature-section">
+      <p className="section-subtitle">Crafted Flavours</p>
+      <h2 className="section-title">Our Signature Dishes</h2>
+
+      <div className="dishes-grid">
+        {dishes.map((dish) => (
+          <div key={dish.id} className="dish-card">
+            <div className="image-wrapper">
+              <img
+                src={dish.image}
+                alt={dish.title}
+                className="dish-image"
+              />
             </div>
-     ))}
-     
-
-     </div>
-
-
-
+            
+            <div className="dish-info">
+              <div className="dish-header">
+                <h3 className="dish-title">{dish.title}</h3>
+                <span className="dish-price">{dish.price}</span>
+              </div>
+              <p className="dish-description">{dish.description}</p>
+           
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
-)
-
+  );
 }
+
+   
