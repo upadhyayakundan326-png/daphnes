@@ -46,8 +46,8 @@ viewport={{once:false,amount:0.3}}
   <Image
     src="/coffe.jpg"
     alt="Coffee"
-    width={400}
-    height={500}
+    width={300}
+    height={350}
     className="coffee-image"
   />
 </div>
