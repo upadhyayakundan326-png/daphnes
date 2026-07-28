@@ -36,7 +36,7 @@ viewport={{once:false,amount:0.3}}
           Daphnes <span>Cafe</span>
         </h1>
 
-        <p className="sub-tag">CAFE · BAR · DINE-IN</p>
+        <p className="sub-tag">CAFE · DINE-IN</p>
 
         <p className="description">
           Crafted flavours. Memorable moments.

@@ -1,107 +1,163 @@
-/* booking.css */
-
-body {
-    margin: 0;
-    background: #f5f5f5;
-    font-family: Arial, Helvetica, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-main {
-    width: 100%;
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 25px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#f8f5f2,#ebe6df);
 }
 
-main h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #222;
-    font-size: 30px;
+/* Container */
+
+.booking-container{
+    width:100%;
+    max-width:430px;
+    margin: 110px auto 30px;
+    padding:20px;
+    background:rgba(255,255,255,.95);
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    backdrop-filter:blur(10px);
+     
 }
 
-main input,
-main textarea {
-    width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 15px;
-    outline: none;
-    transition: 0.3s;
-    box-sizing: border-box;
+.booking-container h1{
+    text-align:center;
+    font-size:2rem;
+    color:#222;
 }
 
-main input:focus,
-main textarea:focus {
-    border-color: crimson;
-    box-shadow: 0 0 8px rgba(220,20,60,.2);
+.booking-container p{
+    text-align:center;
+    color:#777;
+    margin:8px 0 20px;
+    font-size:.95rem;
 }
 
-main textarea {
-    height: 90px;
-    resize: none;
+.booking-container input,
+.booking-container textarea{
+    width:100%;
+    padding:11px 14px;
+    margin-bottom:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
 }
 
-main button {
-    width: 100%;
-    padding: 13px;
-    background: crimson;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+.booking-container textarea{
+    height:70px;
+    resize:none;
 }
 
-main button:hover {
-    background: #b3002d;
-    transform: translateY(-2px);
+.booking-container input:focus,
+.booking-container textarea:focus{
+    border-color:crimson;
+    box-shadow:0 0 10px rgba(220,20,60,.15);
+}
+
+.booking-container button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#d90429,#ef233c);
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.booking-container button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(220,20,60,.25);
 }
 
 /* Large Desktop */
-@media (min-width: 1200px) {
-    main {
-        max-width: 520px;
-        margin: 30px auto;
-        padding: 22px;
-    }
+
+@media(min-width:1200px){
+
+.booking-container{
+    max-width:420px;
+    padding:18px;
+    margin:12px auto;
+}
+
+.booking-container h1{
+    font-size:1.9rem;
+}
+
+.booking-container input,
+.booking-container textarea{
+    padding:10px 14px;
+    margin-bottom:10px;
+}
+
+.booking-container textarea{
+    height:65px;
+}
+
+}
+
+/* Laptop */
+
+@media(max-width:992px){
+
+.booking-container{
+    max-width:450px;
+}
+
 }
 
 /* Tablet */
-@media (max-width: 768px) {
-    main {
-        max-width: 90%;
-        margin: 30px auto;
-        padding: 20px;
-    }
 
-    main h1 {
-        font-size: 26px;
-    }
+@media(max-width:768px){
+
+.booking-container{
+    width:90%;
+    padding:20px;
+    margin:25px auto;
+}
+
+.booking-container h1{
+    font-size:1.8rem;
+}
+
 }
 
 /* Mobile */
-@media (max-width: 480px) {
-    main {
-        max-width: 95%;
-        margin: 20px auto;
-        padding: 18px;
-    }
 
-    main h1 {
-        font-size: 22px;
-    }
+@media(max-width:480px){
 
-    main input,
-    main textarea,
-    main button {
-        font-size: 14px;
-    }
+.booking-container{
+    width:95%;
+    padding:18px;
+    border-radius:15px;
+}
+
+.booking-container h1{
+    font-size:1.6rem;
+}
+
+.booking-container p{
+    font-size:.85rem;
+}
+
+.booking-container input,
+.booking-container textarea,
+.booking-container button{
+    font-size:14px;
+}
+
+.booking-container textarea{
+    height:75px;
+}
+
+}
+body{
+    padding-top:90px;
 }

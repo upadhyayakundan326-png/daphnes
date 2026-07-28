@@ -17,11 +17,7 @@ viewport={{once:false,amount:0.3}}
 
       <h1>Contact Us</h1>
 
-      <p>
-        Whether you have a question, want to reserve a table,
-        place an order, or plan a special event, we're always
-        here to help.
-      </p>
+      
 
       <p>
         <strong>
