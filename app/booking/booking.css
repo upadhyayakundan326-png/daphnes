@@ -1,56 +1,63 @@
 /* booking.css */
 
+body {
+    margin: 0;
+    background: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 main {
-    max-width: 700px;
-    margin: 100px auto;
-    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
 
 main h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #222;
-    font-size: 2rem;
+    font-size: 30px;
 }
 
 main input,
 main textarea {
     width: 100%;
-    padding: 14px 16px;
-    margin-bottom: 18px;
+    padding: 12px 14px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 15px;
     outline: none;
-    transition: .3s;
+    transition: 0.3s;
     box-sizing: border-box;
 }
 
 main input:focus,
 main textarea:focus {
     border-color: crimson;
-    box-shadow: 0 0 8px rgba(220,20,60,.25);
+    box-shadow: 0 0 8px rgba(220,20,60,.2);
 }
 
 main textarea {
+    height: 90px;
     resize: none;
-    height: 120px;
 }
 
 main button {
     width: 100%;
-    padding: 15px;
+    padding: 13px;
     background: crimson;
     color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 17px;
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 main button:hover {
@@ -58,13 +65,43 @@ main button:hover {
     transform: translateY(-2px);
 }
 
-@media (max-width:768px) {
+/* Large Desktop */
+@media (min-width: 1200px) {
     main {
-        margin: 40px 15px;
-        padding: 25px;
+        max-width: 520px;
+        margin: 30px auto;
+        padding: 22px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    main {
+        max-width: 90%;
+        margin: 30px auto;
+        padding: 20px;
     }
 
     main h1 {
-        font-size: 1.7rem;
+        font-size: 26px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    main {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 18px;
+    }
+
+    main h1 {
+        font-size: 22px;
+    }
+
+    main input,
+    main textarea,
+    main button {
+        font-size: 14px;
     }
 }
