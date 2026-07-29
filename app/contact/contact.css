@@ -1,30 +1,20 @@
 .contact-us {
     width: 90%;
     max-width: 550px;
-    margin: 40px auto 80px;
+    margin: 100px auto 80px;
     padding: 35px 30px;
-
     text-align: center;
-
     background: #f8f3eb;
     border-radius: 20px;
-
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-
     box-sizing: border-box;
 }
-
-
-
 
 .contact-us h1 {
     font-size: 2.8rem;
     color: crimson;
     margin-bottom: 20px;
 }
-
-
-
 
 .contact-us p {
     color: #555;
@@ -33,187 +23,98 @@
     font-size: 1rem;
 }
 
-
-/* Contact links container */
-
 .contact-info {
-
     margin-top: 30px;
-
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     gap: 18px;
 }
 
-
-
-
 .contact-info a {
-
     text-decoration: none;
-
     color: #222;
-
     font-size: 1.05rem;
-
     transition: 0.3s ease;
-
     word-break: break-word;
 }
 
-
 .contact-info a:hover {
-
     color: crimson;
-
 }
-
-
-
-
 
 .direction-btn {
-
     display: inline-flex;
-
     justify-content: center;
     align-items: center;
-
     margin-top: 5px;
-
     padding: 10px 25px;
-
     background: crimson;
-
-    color: white !important;
-
+    color: #fff !important;
     border-radius: 25px;
-
     font-size: 14px;
-
     font-weight: 600;
-
     transition: 0.3s ease;
-
 }
-
-
 
 .direction-btn:hover {
-
-    background:#b3002d;
-
+    background: #b3002d;
     transform: translateY(-3px);
-
 }
 
+@media (max-width: 768px) {
 
+    .contact-us {
+        width: 92%;
+        max-width: 500px;
+        margin: 90px auto 60px;
+        padding: 30px 25px;
+    }
 
+    .contact-us h1 {
+        font-size: 2.3rem;
+    }
 
-@media(max-width:768px){
+    .contact-us p {
+        font-size: 15px;
+    }
 
+    .contact-info a {
+        font-size: 1rem;
+    }
 
-.contact-us{
-
-    max-width:500px;
-
-    padding:30px 25px;
-    min-height: 100vh;
-
+    .direction-btn {
+        margin-top: 20px;
+    }
 }
 
+@media (max-width: 480px) {
 
-.contact-us h1{
+    .contact-us {
+        width: 92%;
+        margin: 80px auto 50px;
+        padding: 25px 18px;
+    }
 
-    font-size:2.3rem;
+    .contact-us h1 {
+        font-size: 2rem;
+    }
 
-}
+    .contact-us p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
 
+    .contact-info {
+        gap: 15px;
+    }
 
-.contact-us p{
+    .contact-info a {
+        font-size: 14px;
+    }
 
-    font-size:15px;
-
-}
-
-
-.contact-info a{
-
-    font-size:1rem;
-    margin-top:25px;
-
-}
-.direction-btn{
-    margin-top: 30px;;
-
-}
-
-
-}
-
-
-
-@media(max-width:480px){
-
-
-.contact-us{
-
-    width:92%;
-
-    padding:25px 18px;
-
-    margin:30px auto 50px;
-
-}
-
-
-
-.contact-us h1{
-
-    font-size:2rem;
-
-}
-
-
-.contact-us p{
-
-    font-size:14px;
-
-    line-height:1.6;
-
-}
-
-
-
-.contact-info{
-
-    gap:15px;
-
-}
-
-
-
-.contact-info a{
-
-    font-size:14px;
-
-}
-
-
-
-.direction-btn{
-
-    padding:9px 20px;
-
-    font-size:13px;
-
-}
-
-
-}
-body{
-    padding-top: 50px;
+    .direction-btn {
+        padding: 9px 20px;
+        font-size: 13px;
+    }
 }

@@ -14,7 +14,7 @@ transition={{duration:0.8}}
 viewport={{once:false,amount:0.3}}
     
     >
-      {/* Background Image using Next.js Image component */}
+
       <Image
         src="/ex2.jpg"
         alt="Cafe Background"
@@ -25,10 +25,10 @@ viewport={{once:false,amount:0.3}}
         className="hero-bg-image"
       />
 
-      {/* Dark Overlay for better text readability */}
+      
       <div className="hero-overlay"></div>
 
-      {/* Hero Content (Centered like Leaf Deck) */}
+      
       <div className="hero-content">
         <span className="tag">WELCOME TO</span>
 

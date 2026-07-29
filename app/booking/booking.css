@@ -14,13 +14,12 @@ body{
 .booking-container{
     width:100%;
     max-width:430px;
-    margin: 110px auto 30px;
+    margin:110px auto 40px;
     padding:20px;
     background:rgba(255,255,255,.95);
     border-radius:18px;
     box-shadow:0 15px 35px rgba(0,0,0,.12);
     backdrop-filter:blur(10px);
-     
 }
 
 .booking-container h1{
@@ -79,12 +78,12 @@ body{
 
 /* Large Desktop */
 
-@media(min-width:1200px){
+@media (min-width:1200px){
 
 .booking-container{
     max-width:420px;
     padding:18px;
-    margin:12px auto;
+    margin:110px auto 40px;
 }
 
 .booking-container h1{
@@ -105,7 +104,7 @@ body{
 
 /* Laptop */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
 .booking-container{
     max-width:450px;
@@ -115,13 +114,12 @@ body{
 
 /* Tablet */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .booking-container{
     width:90%;
     padding:20px;
-    margin:25px auto;
-    min-height: 100vh;
+    margin:100px auto 40px;
 }
 
 .booking-container h1{
@@ -132,11 +130,12 @@ body{
 
 /* Mobile */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
 .booking-container{
     width:95%;
     padding:18px;
+    margin:90px auto 40px;
     border-radius:15px;
 }
 
@@ -158,7 +157,4 @@ body{
     height:75px;
 }
 
-}
-body{
-    padding-top:90px;
 }
