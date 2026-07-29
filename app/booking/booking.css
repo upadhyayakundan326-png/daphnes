@@ -120,6 +120,7 @@ body{
     width:90%;
     padding:20px;
     margin:100px auto 40px;
+    min-height: 100dvh;
 }
 
 .booking-container h1{
