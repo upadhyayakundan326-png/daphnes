@@ -46,7 +46,7 @@
 .coffee-image{
     width:100%;
     max-width:400px;
-    height:auto;
+  
     border-radius:20px;
     object-fit:cover;
 }
@@ -125,10 +125,14 @@
         font-size:15px;
     }
 
-    .coffee-image{
-        max-width:320px;
+    
+        
     }
-}
+    .about-image{
+        max-height: 330px;
+         max-width:320px;
+    }
+
 
 /* ================= Small Mobile ================= */
 

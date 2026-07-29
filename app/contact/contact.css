@@ -121,6 +121,7 @@
     max-width:500px;
 
     padding:30px 25px;
+    min-height: 100vh;
 
 }
 
@@ -142,6 +143,11 @@
 .contact-info a{
 
     font-size:1rem;
+    margin-top:25px;
+
+}
+.direction-btn{
+    margin-top: 30px;;
 
 }
 
