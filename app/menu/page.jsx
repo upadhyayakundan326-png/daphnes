@@ -161,7 +161,7 @@ return(
       }}
       transition={{
         duration: 0.8,
-        delay: index * 0.1,
+       
         ease: "easeOut",
       }}
       viewport={{
