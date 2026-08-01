@@ -33,7 +33,7 @@ export default function Booking() {
 📝 Special Request: ${form.request}`;
 
     // Daphnes WhatsApp Number
-    const whatsappLink = `https://wa.me/9101648595?text=${encodeURIComponent(
+    const whatsappLink = `https://wa.me/+91 9101648595?text=${encodeURIComponent(
       message
     )}`;
 
