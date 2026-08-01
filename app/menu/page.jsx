@@ -17,170 +17,206 @@ export default function Menu() {
     menuData[4].items[1],
   ];
 
+  // All dishes
+  const allItems = menuData.flatMap(category => category.items);
+
+  // Suggestions
+  const suggestions = search
+    ? allItems.filter(item =>
+        item.name.toLowerCase().includes(search.toLowerCase())
+      )
+    : [];
+
+  // Filter menu
   const filteredMenu = menuData
-    .map((category) => ({
+    .map(category => ({
       ...category,
-      items: category.items.filter((item) =>
+      items: category.items.filter(item =>
         item.name.toLowerCase().includes(search.toLowerCase())
       ),
     }))
-    .filter((category) => category.items.length > 0);
+    .filter(category => category.items.length > 0);
+return(
+ <motion.section
+  className="menu-page"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
 
-  return (
-    <motion.section
-      className="menu-page"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+  {/* Header */}
+
+  <div className="menu-header">
+
+    <div className="menu-heading"></div>
+
+    <h1
+      style={{
+        fontSize: "58px",
+        fontWeight: "700",
+        lineHeight: "1.2",
+        marginBottom: "20px",
+        fontFamily: "Georgia, serif",
+      }}
     >
-      {/* Header */}
+      <span style={{ color: "#8B5E3C" }}>
+        Discover
+      </span>{" "}
+      <span style={{ color: "#8B5E3C" }}>
+        Our Signature Dishes
+      </span>
+    </h1>
 
-      <div className="menu-header">
+    <p>
+      Fresh ingredients, handcrafted recipes, and unforgettable
+      flavors. Explore our carefully curated menu made with love
+      at Daphnes Cafe.
+    </p>
 
-        <div className="menu-heading"></div>
+  </div>
 
-        <h1
-          style={{
-            fontSize: "58px",
-            fontWeight: "700",
-            lineHeight: "1.2",
-            marginBottom: "20px",
-            fontFamily: "Georgia, serif",
-          }}
-        >
-          <span style={{ color: "#8B5E3C" }}>Discover </span>
+  {/* Featured */}
 
-          <span style={{ color: "#8B5E3C" }}>
-            Our Signature Dishes
-          </span>
-        </h1>
+  <div className="featured-grid">
 
-        <p>
-          Fresh ingredients, handcrafted recipes, and unforgettable
-          flavors. Explore our carefully curated menu made with love
-          at Daphnes Cafe.
-        </p>
+    {featuredItems.map((item) => (
+
+      <div className="food-card" key={item.name}>
+
+        <Image
+          src={item.image}
+          alt={item.name}
+          width={400}
+          height={280}
+          className="food-image"
+        />
+
+        <div className="food-info">
+
+          <h3>{item.name}</h3>
+
+          <p>{item.description}</p>
+
+          <span>{item.price}</span>
+
+        </div>
 
       </div>
 
-      {/* Featured */}
+    ))}
 
-      <div className="featured-grid">
+  </div>
 
-        {featuredItems.map((item) => (
+  {/* Search */}
 
-          <div className="food-card" key={item.name}>
+  <div className="search-box">
 
-            <Image
-              src={item.image}
-              alt={item.name}
-              width={400}
-              height={280}
-              className="food-image"
-            />
+    <FaSearch className="search-icon" />
 
-            <div className="food-info">
+    <input
+      type="text"
+      placeholder="Search your favourite dish..."
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+    />
 
-              <h3>{item.name}</h3>
+    {search && suggestions.length > 0 && (
 
-              <p>{item.description}</p>
+      <div className="suggestions">
 
-              <span>{item.price}</span>
+        {suggestions.map((item) => (
 
-            </div>
-
+          <div
+            key={item.name}
+            className="suggestion-item"
+            onClick={() => setSearch(item.name)}
+          >
+            {item.name}
           </div>
 
         ))}
 
       </div>
 
-      {/* Search */}
+    )}
 
-      <div className="search-box">
+  </div>
 
-        <FaSearch className="search-icon" />
+  {/* Full Menu */}
 
-        <input
-          type="text"
-          placeholder="Search your favourite dish..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+ <div className="menu-container">
 
-      </div>
+  {filteredMenu.map((category, index) => (
 
-      {/* Full Menu */}
+    <motion.div
+      key={category.category}
+      className="menu-category"
+      initial={{
+        opacity: 0,
+        x: index % 2 === 0 ? -120 : 120,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      transition={{
+        duration: 0.8,
+        delay: index * 0.1,
+        ease: "easeOut",
+      }}
+      viewport={{
+        once: false,
+        amount: 0.3,
+      }}
+    >
 
-      <div className="menu-container">
+      <h2 className="category-title">
+        {category.category}
+      </h2>
 
-        {filteredMenu.map((category, index) => (
+      {category.items.map((item) => (
 
-          <motion.div
-            key={category.category}
-            className="menu-category"
-            initial={{
-              opacity: 0,
-              x: index % 2 === 0 ? -120 : 120,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-            viewport={{
-              once: false,
-              amount: 0.3,
-            }}
-          >
+        <div
+          className="menu-item"
+          key={item.name}
+        >
 
-            <h2 className="category-title">
-              {category.category}
-            </h2>
+          <Image
+            src={item.image}
+            alt={item.name}
+            width={350}
+            height={250}
+            className="menu-image"
+          />
 
-            {category.items.map((item) => (
+          <div className="item-content">
 
-              <div
-                className="menu-item"
-                key={item.name}
-              >
+            <div className="title-price">
 
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={350}
-                  height={250}
-                  className="menu-image"
-                />
+              <h3>{item.name}</h3>
 
-                <div className="item-content">
+              <span className="price">
+                {item.price}
+              </span>
 
-                  <div className="title-price">
+            </div>
 
-                    <h3>{item.name}</h3>
+            <p>{item.description}</p>
 
-                    <span className="price">
-                      {item.price}
-                    </span>
+          </div>
 
-                  </div>
+        </div>
 
-                  <p>{item.description}</p>
+      ))}
 
-                </div>
+    </motion.div>
 
-              </div>
+  ))}
 
-            ))}
+</div>
 
-          </motion.div>
-
-        ))}
-
-      </div>
-
-    </motion.section>
-  );
+</motion.section>
+);
 }
+  
+  

@@ -1,222 +1,110 @@
 "use client";
 
-import "./menu.css";
-import menuData from "./menudata";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import "./booking.css";
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
 
-export default function Menu() {
+export default function Booking() {
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    date: "",
+    time: "",
+    guests: "",
+    request: "",
+  });
 
-  const [search, setSearch] = useState("");
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  const featuredItems = [
-    menuData[0].items[0],
-    menuData[1].items[0],
-    menuData[4].items[1],
-  ];
+  const bookTable = (e) => {
+    e.preventDefault();
 
-  // All dishes
-  const allItems = menuData.flatMap(category => category.items);
+    const message = `☕ *Cafe Daphnes - Table Reservation*
 
-  // Suggestions
-  const suggestions = search
-    ? allItems.filter(item =>
-        item.name.toLowerCase().includes(search.toLowerCase())
-      )
-    : [];
+👤 Name: ${form.name}
+📞 Phone: ${form.phone}
+📅 Date: ${form.date}
+⏰ Time: ${form.time}
+👥 Guests: ${form.guests}
+📝 Special Request: ${form.request}`;
 
-  // Filter menu
-  const filteredMenu = menuData
-    .map(category => ({
-      ...category,
-      items: category.items.filter(item =>
-        item.name.toLowerCase().includes(search.toLowerCase())
-      ),
-    }))
-    .filter(category => category.items.length > 0);
-return(
- <motion.section
-  className="menu-page"
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
->
+    // Daphnes WhatsApp Number
+    const whatsappLink = `https://wa.me/9101648595?text=${encodeURIComponent(
+      message
+    )}`;
 
-  {/* Header */}
+    window.open(whatsappLink, "_blank");
+  };
 
-  <div className="menu-header">
+  return (
+    <div className="booking-container">
+      <h1>Reserve Your Table</h1>
 
-    <div className="menu-heading"></div>
+      <p>
+        Fill in your details and book instantly through WhatsApp.
+      </p>
 
-    <h1
-      style={{
-        fontSize: "58px",
-        fontWeight: "700",
-        lineHeight: "1.2",
-        marginBottom: "20px",
-        fontFamily: "Georgia, serif",
-      }}
-    >
-      <span style={{ color: "#8B5E3C" }}>
-        Discover
-      </span>{" "}
-      <span style={{ color: "#8B5E3C" }}>
-        Our Signature Dishes
-      </span>
-    </h1>
+      <form onSubmit={bookTable}>
 
-    <p>
-      Fresh ingredients, handcrafted recipes, and unforgettable
-      flavors. Explore our carefully curated menu made with love
-      at Daphnes Cafe.
-    </p>
-
-  </div>
-
-  {/* Featured */}
-
-  <div className="featured-grid">
-
-    {featuredItems.map((item) => (
-
-      <div className="food-card" key={item.name}>
-
-        <Image
-          src={item.image}
-          alt={item.name}
-          width={400}
-          height={280}
-          className="food-image"
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={form.name}
+          onChange={handleChange}
+          required
         />
 
-        <div className="food-info">
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          value={form.phone}
+          onChange={handleChange}
+          required
+        />
 
-          <h3>{item.name}</h3>
+        <input
+          type="date"
+          name="date"
+          value={form.date}
+          onChange={handleChange}
+          required
+        />
 
-          <p>{item.description}</p>
+        <input
+          type="time"
+          name="time"
+          value={form.time}
+          onChange={handleChange}
+          required
+        />
 
-          <span>{item.price}</span>
+        <input
+          type="number"
+          name="guests"
+          placeholder="Number of Guests"
+          value={form.guests}
+          onChange={handleChange}
+          required
+        />
 
-        </div>
+        <textarea
+          name="request"
+          placeholder="Special Request (Optional)"
+          value={form.request}
+          onChange={handleChange}
+        />
 
-      </div>
+        <button type="submit">
+          Book via WhatsApp
+        </button>
 
-    ))}
-
-  </div>
-
-  {/* Search */}
-
-  <div className="search-box">
-
-    <FaSearch className="search-icon" />
-
-    <input
-      type="text"
-      placeholder="Search your favourite dish..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-    />
-
-    {search && suggestions.length > 0 && (
-
-      <div className="suggestions">
-
-        {suggestions.map((item) => (
-
-          <div
-            key={item.name}
-            className="suggestion-item"
-            onClick={() => setSearch(item.name)}
-          >
-            {item.name}
-          </div>
-
-        ))}
-
-      </div>
-
-    )}
-
-  </div>
-
-  {/* Full Menu */}
-
- <div className="menu-container">
-
-  {filteredMenu.map((category, index) => (
-
-    <motion.div
-      key={category.category}
-      className="menu-category"
-      initial={{
-        opacity: 0,
-        x: index % 2 === 0 ? -120 : 120,
-      }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
-      }}
-      transition={{
-        duration: 0.8,
-        delay: index * 0.1,
-        ease: "easeOut",
-      }}
-      viewport={{
-        once: false,
-        amount: 0.3,
-      }}
-    >
-
-      <h2 className="category-title">
-        {category.category}
-      </h2>
-
-      {category.items.map((item) => (
-
-        <div
-          className="menu-item"
-          key={item.name}
-        >
-
-          <Image
-            src={item.image}
-            alt={item.name}
-            width={350}
-            height={250}
-            className="menu-image"
-          />
-
-          <div className="item-content">
-
-            <div className="title-price">
-
-              <h3>{item.name}</h3>
-
-              <span className="price">
-                {item.price}
-              </span>
-
-            </div>
-
-            <p>{item.description}</p>
-
-          </div>
-
-        </div>
-
-      ))}
-
-    </motion.div>
-
-  ))}
-
-</div>
-
-</motion.section>
-);
+      </form>
+    </div>
+  );
 }
-  
-  
