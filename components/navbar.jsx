@@ -14,7 +14,7 @@ export default function Navbar() {
   <li className="link"><a href="/">Home</a></li>
 
   <li className="link"><a href="/menu">Menu</a></li>
-  <li className="link"><Link href="/contact">Contact</Link></li>
+  <li className="link"><a href="#footer">Contact</a></li>
   <li className="link">
   <a
     href="https://www.zomato.com/your-zomato-link"

@@ -1,13 +1,15 @@
-
 "use client";
+
 import "./menu.css";
 import menuData from "./menudata";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 
+export default function Menu() {
 
-
-export default function Menu(){
+  const [search, setSearch] = useState("");
 
   const featuredItems = [
     menuData[0].items[0],
@@ -15,14 +17,22 @@ export default function Menu(){
     menuData[4].items[1],
   ];
 
+  const filteredMenu = menuData
+    .map((category) => ({
+      ...category,
+      items: category.items.filter((item) =>
+        item.name.toLowerCase().includes(search.toLowerCase())
+      ),
+    }))
+    .filter((category) => category.items.length > 0);
+
   return (
     <motion.section
-  className="menu-page"
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8}}
-  viewport={{ once: false }}
->
+      className="menu-page"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       {/* Header */}
 
       <div className="menu-header">
@@ -38,9 +48,8 @@ export default function Menu(){
             fontFamily: "Georgia, serif",
           }}
         >
-          <span style={{ color: "#8B5E3C" }}>
-            Discover
-          </span>{" "}
+          <span style={{ color: "#8B5E3C" }}>Discover </span>
+
           <span style={{ color: "#8B5E3C" }}>
             Our Signature Dishes
           </span>
@@ -54,7 +63,7 @@ export default function Menu(){
 
       </div>
 
-      {/* Featured Dishes */}
+      {/* Featured */}
 
       <div className="featured-grid">
 
@@ -86,25 +95,45 @@ export default function Menu(){
 
       </div>
 
+      {/* Search */}
+
+      <div className="search-box">
+
+        <FaSearch className="search-icon" />
+
+        <input
+          type="text"
+          placeholder="Search your favourite dish..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+
+      </div>
+
       {/* Full Menu */}
 
-      <motion.div
-       className="menu-container"
-       
-       
-       >
+      <div className="menu-container">
 
-        {menuData.map((category) => (
+        {filteredMenu.map((category, index) => (
 
           <motion.div
-            className="menu-category"
-             initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
- viewport={{ once: false, amount: 0.3 }}
             key={category.category}
-
-            
+            className="menu-category"
+            initial={{
+              opacity: 0,
+              x: index % 2 === 0 ? -120 : 120,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.8,
+            }}
+            viewport={{
+              once: false,
+              amount: 0.3,
+            }}
           >
 
             <h2 className="category-title">
@@ -116,7 +145,6 @@ export default function Menu(){
               <div
                 className="menu-item"
                 key={item.name}
-                
               >
 
                 <Image
@@ -151,7 +179,7 @@ export default function Menu(){
 
         ))}
 
-      </motion.div>
+      </div>
 
     </motion.section>
   );

@@ -18,7 +18,6 @@ viewport={{once:false,amount:0.3}}
 
   <div className="about-content">
 
-    <span>ABOUT US</span>
 
     <h2>
       EAT, DRINK,<br />
